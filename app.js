@@ -590,7 +590,7 @@
 //     }
 //     return splitStr.join(' '); 
 //  }
- 
+
 //  document.write(titleCase("I'm a little tea pot"));    
 
 //TASK 12
@@ -648,3 +648,504 @@
 //     document.write("The area is : " + a)
 // }
 // calcArea(2)
+
+
+//CHAPTER 38-42
+
+//TASK 1
+
+// function power(a, b) {
+//     var c =  a ** b
+//     return c
+// }
+// alert(power(2,5))
+
+//TASK 2
+
+// function leap(){
+//     var a = prompt("Enter any year")
+//     if(a % 4 === 0){
+//         alert("Your year is in the list of leap years")
+//     }
+//     else {
+//         alert("Your year is not in the list of leap years")
+//     }
+// }
+// leap()
+
+//TASK 3
+
+// var a = +prompt("Enter first side of triangel")
+// var b = +prompt("Enter second side of triangel")
+// var c = +prompt("Enter third side of triangel")
+
+// function sides(){
+//     var s = (a + b + c) / 2
+//     return s
+// }
+
+
+// function areaOfTriangle(){
+//     var area = sides()
+//     var total = area * (area - a) * (area - b) * (area - c)
+//     return total
+
+// }
+// alert (areaOfTriangle())
+
+//TASK 4
+
+// var sub1 = +prompt("Enter your first subject marks out of hundred ")
+// var sub2 = +prompt("Enter your second subject marks out of hundred ")
+// var sub3 = +prompt("Enter your third subject marks out of hundred ")
+
+// function average(){
+//     var ave = (sub1 + sub2 + sub3) / 3
+//     return ave
+// }
+
+// function percentage(){
+//     var per = (sub1 + sub2 + sub3)  * 100 / 300 ;
+//     return per   
+// }
+// function main(){
+//     document.write("The marrks of first subject is : " + sub1 + "<br>")
+//     document.write("The marrks of second subject is : " + sub2 + "<br>")
+//     document.write("The marrks of third subject is : " + sub3 + "<br>")
+//     var a = average()
+//     var b = percentage()
+//     document.write("The average of all subject is : " + a + "<br>")
+//     document.write("The percentage of all subject is : " + b + "%")
+
+// }
+
+// main()
+
+//TASK 5
+
+
+// function IndexOf(para,char){
+//     split = para.split('')
+//     for(var i = 0;i < split.length; i++){
+//         if(split[i] === char){
+//             document.write( "<br>" + "The index of " + split[i] + " is " +  i)
+//         }
+//     }
+// }
+
+// var para = prompt("Enter any sentence")
+// var char = prompt("Enter any charachter for index")
+// IndexOf(para,char)
+
+
+
+
+//TASK 6
+
+// var string = "The Winner of ICC World Cup 2019 is England"
+// string = string.toLowerCase()
+// var split = string.split('')  
+// for(var i = 0; i < split.length; i++){
+//     if(split[i] === "a" || split[i] === "e" ||split[i] === "i" || split[i] === "o" || split[i] === "u"){
+//         delete split[i]
+//     }
+// }
+
+// document.write("With vowels = " + string + "<br>")
+// document.write("Without vowels = " + split)
+
+//TASK 7
+
+// function findOccurrences() {
+//     var str = "Pleases read this application and give me gratuity";
+//     var count = 0;
+//     let haveSeenVowel = false;
+//     document.write("String = " + str + "<br>")
+
+//     for (const letter of str.toLowerCase()) {
+//       switch (letter) {
+//         case 'a':
+//         case 'e':
+//         case 'i':
+//         case 'o':
+//         case 'u':
+//           {
+//             if (haveSeenVowel) {
+//               count++;
+//               haveSeenVowel = false;
+//             } else {
+//               haveSeenVowel = true;
+//             }
+//             break;
+//           }
+//         default:
+//           haveSeenVowel = false
+//       }
+//     }
+
+//     return count
+//   }
+
+//   document.write("Occurrence of Vowels = " + findOccurrences());
+
+//TASK 8
+
+// var distance = +prompt("Enter distance between Karachi and Lahore in Km")
+// function meter(){
+//     var met = distance * 1000
+//     return met 
+// }
+// function foot(){
+//     var feet = distance * 3280.84
+//     return feet 
+// }
+// function inches(){
+//     var inc = distance * 39370.
+//     return inc
+// }
+// function centimeters(){
+//     var cm = distance * (1000 * 100)
+//     return cm
+// }
+// document.write("The distance between Karachi and Lahore in meter is = " + meter() + "<br>")
+// document.write("The distance between Karachi and Lahore in feet is = " + foot() + "<br>")
+// document.write("The distance between Karachi and Lahore in inches is = " + inches() + "<br>")
+// document.write("The distance between Karachi and Lahore in centimeter is = " + centimeters())
+
+//TASK 9
+
+// var salary = +prompt("Enter your salary")
+// var workTtime = +prompt("Enter your workTime 40 hours or above")
+// var hours = 40
+// var rate = 12
+
+// function overTime() {
+//     if (workTtime <= 40) {
+//         document.write(salary)
+//     }
+//     else{
+//         var a = (workTtime - hours) * rate
+//         var b = salary + a
+//         document.write("<br>" + "Your salary with over time is " + b )
+//     }
+// }
+
+// overTime()
+
+//TASK 10
+
+// function notes(amount){
+//     var note1000 = Math.floor(amount / 1000)
+//     var remain1000 =  amount - (note1000 * 1000)
+//     document.write("There are " + note1000 + "notes of thousand in " + amount + "<br>" )
+
+
+//     var note500 = Math.floor(remain1000 / 500)
+//     var remain500 =  remain1000 - (note500 * 500)
+//     document.write("There are " + note500 + "notes of Five Hundred in " + amount + "<br>" )
+
+//     var note100 = Math.floor(remain500 / 100)
+//     var remain100 =  remain500 - (note100 * 100)
+//     document.write("There are " + note100 + "notes of Hundred in " + amount + "<br>" )
+
+//     var note20 = Math.floor(remain100 / 20)
+//     var remain20 =  remain100 - (note20 * 20)
+//     document.write("There are " + note20 + "notes of Twenty in " + amount + "<br>" )
+
+//     var note10 = Math.floor( remain20/ 10)
+//     var remain10 =  remain20 - (note10 * 10)
+//     document.write("There are " + note10 + "notes of Ten in " + amount + "<br>" )
+// }
+// var amount = +prompt("Enter any amount above 1000")
+// notes(amount)
+
+//CHAPTER 43-48
+
+//TASK 1
+
+
+// function greet(){
+//     alert("Hello world")
+// }
+
+//TASK 2
+
+// function thanks(){
+//  alert("Thanks for purchasing mobile from us")
+// }
+
+//TASK 3
+
+// function dltFirst() {
+//     var table = document.getElementById("first")
+//     table.style.display = "none"
+// }
+// function dltSecond() {
+//     var table = document.getElementById("second")
+//     table.style.display = "none"
+// }
+// function dltThird() {
+//     var table = document.getElementById("third")
+//     table.style.display = "none"
+// }
+// function dltFourth() {
+//     var table = document.getElementById("four")
+//     table.style.display = "none"
+// }
+// function dltFifth() {
+//     var table = document.getElementById("five")
+//     table.style.display = "none"
+// }
+// function dltSix() {
+//     var table = document.getElementById("six")
+//     table.style.display = "none"
+// }
+// function dltSeven() {
+//     var table = document.getElementById("seven")
+//     table.style.display = "none"
+// }
+// function dltEight() {
+//     var table = document.getElementById("eight")
+//     table.style.display = "none"
+// }
+// function dltNine() {
+//     var table = document.getElementById("nine")
+//     table.style.display = "none"
+// }
+// function dltTen() {
+//     var table = document.getElementById("ten")
+//     table.style.display = "none"
+// }
+
+
+//TASK 4
+
+// function mouseOver(){
+//     var image = document.getElementById("image")
+//     image.src = "mob2.jpg"
+// }
+// function mouseOut(){
+//     var image = document.getElementById("image")
+//     image.src = "mob1.jpg"
+// }
+
+//TASK 5
+
+
+// count = 0
+// function increase(){
+// count++
+//     var cd = document.getElementById("countdown")
+//     cd.innerHTML = count
+// }
+// function decrease(){
+// count--
+//     var cd = document.getElementById("countdown")
+//     cd.innerHTML = count
+// }
+
+// CHAPTER 49-52
+
+//TASK 1
+
+// function content(){
+//     var email = document.getElementById("email")
+//     first.innerHTML = "Email = " + email.value
+
+//     var pass = document.getElementById("pass")
+
+//     second.innerHTML = "Pass = " + pass.value
+
+//     var container = document.getElementById("container")
+//     container.style.display = "none"
+
+//     var cont = document.getElementById("content")
+//     cont.style.display = "block"
+
+
+// }
+
+//TASK 2
+
+// function readMore(){
+//     var more = document.getElementById("more")
+//     more.style.display = "block"
+// }
+
+//TASK 3
+
+// var info = document.getElementById("info")
+
+// function data() {
+//     var fname = document.getElementById("fname")
+//     var lname = document.getElementById("lname")
+//     var email = document.getElementById("email")
+//     var pass = document.getElementById("pass")
+//     console.log(fname.value)
+//     var tr = document.createElement("tr")
+
+//     var th1 = document.createElement("th")
+//     var th2 = document.createElement("th")
+//     var th3 = document.createElement("th")
+//     var btn = document.createElement("button")
+//     var edit = document.createElement("button")
+      
+//     var th1Text = document.createTextNode(fname.value)
+//     var th2Text = document.createTextNode(lname.value)
+//     var th3Text = document.createTextNode(email.value)
+//     var btnText = document.createTextNode("Delete")
+//     var editText = document.createTextNode("edit")
+
+//     btn.setAttribute("onclick" , "dlt(this)")
+//     btn.setAttribute("id" , "button")
+//     btn.setAttribute("class" , "button")
+
+//     edit.setAttribute("onclick" , "hide(this)")
+
+
+
+//     th1.appendChild(th1Text)
+//     th2.appendChild(th2Text)
+//     th3.appendChild(th3Text)
+//     btn.appendChild(btnText)
+//     edit.appendChild(editText)
+
+//     tr.appendChild(th1)
+//     tr.appendChild(th2)
+//     tr.appendChild(th3)
+//     tr.appendChild(btn)
+//     tr.appendChild(edit)
+
+//     info.appendChild(tr)
+
+// }
+
+// function dlt(e){
+//     e.parentNode.remove()
+
+// }
+// function hide(e){
+//     var fname = document.getElementById("fname")
+//     var lname = document.getElementById("lname")
+//     var email = document.getElementById("email")
+
+
+//     var form = document.getElementById("hiddenform")
+//     var p1 = document.createElement("p")
+//     var p2 = document.createElement("p")
+//     var p3 = document.createElement("p")
+
+//     var p1Text = document.createTextNode( "First Name : " + fname.value)
+//     var p2Text = document.createTextNode( "Last Name : " + lname.value )
+//     var p3Text = document.createTextNode(  "Email : " + email.value )
+
+//     p1.appendChild(p1Text)
+//     p2.appendChild(p2Text)
+//     p3.appendChild(p3Text)
+
+//     form.appendChild(p1)
+//     form.appendChild(p2)
+//     form.appendChild(p3)
+
+// }
+
+
+//CHAPTER 53-58
+
+//TASK 1
+
+var images = ["mob1.jpg" , "mob2.jpg" , "mob 3.jpg" , "mob 4.jpg"]
+var img1  = document.getElementById("img1")
+var img2 = document.getElementById("img2")
+var img3 = document.getElementById("img3")
+var img4 = document.getElementById("img4")
+for(var i = 0 ; i < images.length ; i++){
+    img1.src = images[0]
+    img2.src = images[1]
+    img3.src = images[2]
+    img4.src = images[3]
+}
+
+
+
+
+
+//CHAPTER 59-67
+//TASK 1 (i)
+
+// var main = document.getElementById("main-content")
+// var mainElements = main.childNodes
+
+//TASK 1(ii)
+
+// for(var i = 0 ; i  < mainElements.length ; i++){
+//     document.write(mainElements[i].nodeName + "<br>")
+// }
+
+//TASK 1(iii)
+
+
+// var render = document.getElementsByClassName("render")
+// for(var i = 0 ; i < render.length ; i++){
+//     document.write(render[i].firstChild.nodeValue + "<br>")
+// }
+
+//TASK 1(iv)
+// var main = document.getElementById("main-content")
+// var fname = document.getElementById("first-name")
+// fname.value =  main.childNodes[1].firstChild.nodeValue 
+// console.log(fname.value)
+
+//TASK 1 (v)
+
+// var main = document.getElementById("main-content")
+// var lname = document.getElementById("last-name")
+// lname.value =  main.childNodes[2].firstChild.nodeValue 
+// console.log(lname.value)
+
+// var main = document.getElementById("main-content")
+// var email = document.getElementById("email")
+// email.value =  main.childNodes[3].firstChild.nodeValue 
+// console.log(email.value)
+
+
+
+// document.write("The value of element having id first name is " + fvalue + "<br>")
+
+// //TASK 2 (i)
+// var form = document.getElementById("form-content")
+// document.write("The node type of id form-content is " + form.nodeType + "<br>")
+
+// //TASK 2 (ii)
+// var last = document.getElementById("lastName")
+// var child = last.firstChild.nodeValue
+// document.write( "<br>" + "The node type of id lastName is " + last.nodeType + " and  child node is  " + child + "<br>")
+
+// //TASK 3 (iii)
+
+// var update = child = "Last Name : Price"
+// document.write("The updated value of child node of id lastName is " + update + "<br>")
+
+// //TASK(iv)
+
+// var main = document.getElementById("main-content")
+// document.write("The first child of id main-content is " + main.firstChild.nodeName + "<br>")
+
+// //TASK (v)
+
+// var last = document.getElementById("lastName")
+// var next = last.nextSibling.nodeValue;
+// var previous = last.previousSibling.nodeValue
+// document.write("The next sibling of id last name is " + next + "<br>")
+// document.write("The previous sibling of id last name is " + previous + "<br>")
+
+// //TASK (vi)
+
+// var email = document.getElementById("email")
+// var parent = email.parentNode
+// var type = email.nodeType
+// document.write("The parent node  of element having id email is  " +parent.nodeName + "<br>")
+// document.write("The node type of element having id email is  " +type)
+
+
+
