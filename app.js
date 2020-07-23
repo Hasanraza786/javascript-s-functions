@@ -1054,17 +1054,38 @@
 
 //TASK 1
 
-var images = ["mob1.jpg" , "mob2.jpg" , "mob 3.jpg" , "mob 4.jpg"]
-var img1  = document.getElementById("img1")
-var img2 = document.getElementById("img2")
-var img3 = document.getElementById("img3")
-var img4 = document.getElementById("img4")
-for(var i = 0 ; i < images.length ; i++){
-    img1.src = images[0]
-    img2.src = images[1]
-    img3.src = images[2]
-    img4.src = images[3]
-}
+// var images = ["mob1.jpg" , "mob2.jpg" , "mob 3.jpg" , "mob 4.jpg"]
+// var img1  = document.getElementById("img1")
+// var img2 = document.getElementById("img2")
+// var img3 = document.getElementById("img3")
+// var img4 = document.getElementById("img4")
+// for(var i = 0 ; i < images.length ; i++){
+//     img1.src = images[0]
+//     img2.src = images[1]
+//     img3.src = images[2]
+//     img4.src = images[3]
+// }
+// function showImage(e){
+//     console.log(e.src)
+//     var img = document.getElementById("modalImage")
+//     img.src = e.src
+// }
+
+//TASK 2
+
+
+
+// function zoomIn(){
+//     var para = document.getElementById("para")
+//     console.log(para.style.fontSize.slice(0,-2))
+//     para.style.fontSize = +para.style.fontSize.slice(0,-2) + 10 + "px"
+
+// }
+// function zoomOut(){
+//     var para = document.getElementById("para")
+//     console.log(para.style.fontSize.slice(0,-2))
+//     para.style.fontSize = +para.style.fontSize.slice(0,-2) - 10 + "px"
+// }
 
 
 
